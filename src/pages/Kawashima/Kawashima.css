@@ -1,0 +1,1 @@
+.problems{display:grid;grid-template-columns:repeat(6, 1fr);background-color:#fff}.problems-item{text-align:left;padding:5px;border:1px solid #cecece}.problems-item:hover{background-color:#ebebeb}@media(max-width: 860px){.problems{grid-template-columns:repeat(auto-fill, minmax(200px, 1fr))}}

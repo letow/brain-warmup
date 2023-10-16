@@ -1,0 +1,38 @@
+.problems {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: #fff;
+    height: 100vh;
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        border: 1px solid #cecece;
+        &:hover {
+            background-color: #ebebeb;
+        }
+    }
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: rgb(220, 212, 0);
+}
+
+.blue {
+    color: blue;
+}
+
+@media (max-width: 860px) {
+    .problems {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
