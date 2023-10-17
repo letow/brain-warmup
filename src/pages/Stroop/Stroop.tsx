@@ -6,7 +6,7 @@ const Stroop = () => {
     const colors = ["red", "green", "blue", "yellow"];
     const words = ["красный", "зеленый", "синий", "желтый"];
 
-    const generate = useMemo(() => {
+    const data = useMemo(() => {
         const colorArr = Array.from(
             { length: amount },
             () => colors[Math.floor(Math.random() * colors.length)]
@@ -21,9 +21,9 @@ const Stroop = () => {
     return (
         <div className={s.color__problems}>
             <div className={s.problems}>
-                {generate.colorArr.map((cl) => (
+                {data.colorArr.map((cl) => (
                     <div className={`${s.problems__item} ${s[cl]}`}>
-                        {generate.wordsArr[Math.floor(Math.random() * 4)]}
+                        {data.wordsArr[Math.floor(Math.random() * 4)]}
                     </div>
                 ))}
             </div>
