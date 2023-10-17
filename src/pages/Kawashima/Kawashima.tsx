@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import "./Kawashima.scss";
+import s from "./Kawashima.module.scss";
 
 const Kawashima = () => {
     const problemAmount = 120;
@@ -7,8 +7,7 @@ const Kawashima = () => {
 
     const [showAns, setShowAns] = useState(false);
 
-    //generate array of arrays
-    const generate = useMemo(() => {
+    const data = useMemo(() => {
         const problems = Array.from(Array(problemAmount), () =>
             Array.from({ length: 2 }, () => Math.floor(Math.random() * 20))
         );
@@ -24,21 +23,21 @@ const Kawashima = () => {
     }, []);
 
     return (
-        <div className="math-problems">
+        <div className={s.math__problems}>
             <button onClick={() => setShowAns((prev) => !prev)}>Show answers</button>
-            <div className="problems">
-                {generate.problems.map((item, ind) => (
-                    <div className="problems-item">
+            <div className={s.problems}>
+                {data.problems.map((item, ind) => (
+                    <div className={s.problems__item}>
                         {item[0] +
                             " " +
-                            generate.operations[ind] +
+                            data.operations[ind] +
                             " " +
                             item[1] +
                             " = " +
                             (showAns
-                                ? Math.floor(generate.answers[ind][0]) +
-                                  (generate.answers[ind][1]
-                                      ? " ост." + generate.answers[ind][1]
+                                ? Math.floor(data.answers[ind][0]) +
+                                  (data.answers[ind][1]
+                                      ? " ост." + data.answers[ind][1]
                                       : "")
                                 : "")}
                     </div>

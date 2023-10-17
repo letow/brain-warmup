@@ -2,7 +2,9 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     background-color: #fff;
-    &-item {
+    &__item {
+        display: flex;
+        align-items: center;
         text-align: left;
         padding: 5px;
         border: 1px solid #cecece;
