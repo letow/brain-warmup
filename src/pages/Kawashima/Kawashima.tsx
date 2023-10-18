@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import s from "./Kawashima.module.scss";
+import Timer from "../../components/Timer/Timer";
 
 const Kawashima = () => {
     const problemAmount = 120;
@@ -23,11 +24,16 @@ const Kawashima = () => {
     }, []);
 
     return (
-        <div className={s.math__problems}>
-            <button onClick={() => setShowAns((prev) => !prev)}>Show answers</button>
+        <div className={s.Kawashima}>
+            <div className={s.header}>
+                <button onClick={() => setShowAns((prev) => !prev)}>
+                    Show answers
+                </button>
+                <Timer seconds={500} />
+            </div>
             <div className={s.problems}>
                 {data.problems.map((item, ind) => (
-                    <div className={s.problems__item}>
+                    <div className={s.problems__item} key={Math.random().toString()}>
                         {item[0] +
                             " " +
                             data.operations[ind] +

@@ -1,7 +1,19 @@
+.Kawashima {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
 .problems {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     background-color: #fff;
+    height: 100%;
     &__item {
         display: flex;
         align-items: center;
