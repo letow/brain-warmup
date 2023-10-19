@@ -1,12 +1,14 @@
 import { useMemo, useState } from "react";
 import s from "./Kawashima.module.scss";
 import Timer from "../../components/Timer/Timer";
+import InfoBox from "../../components/InfoBox/InfoBox";
 
 const Kawashima = () => {
     const problemAmount = 120;
     const opSigns = "+++---/*";
 
     const [showAns, setShowAns] = useState(false);
+    const [isOpenInfo, setIsOpenInfo] = useState(true);
 
     const data = useMemo(() => {
         const problems = Array.from(Array(problemAmount), () =>
@@ -22,6 +24,10 @@ const Kawashima = () => {
         ]);
         return { problems, operations, answers };
     }, []);
+
+    const closeInfo = () => {
+        setIsOpenInfo(false);
+    };
 
     return (
         <div className={s.Kawashima}>
@@ -49,6 +55,12 @@ const Kawashima = () => {
                     </div>
                 ))}
             </div>
+            <InfoBox onClose={closeInfo} isOpen={isOpenInfo}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                possimus illum aliquam ducimus, iusto praesentium corporis fugit veniam
+                cupiditate minus eveniet, amet similique quasi sed facilis at illo optio
+                omnis.
+            </InfoBox>
         </div>
     );
 };

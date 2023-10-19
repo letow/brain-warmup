@@ -1,0 +1,45 @@
+.InfoBox {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(7px) grayscale(100%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 600px;
+    box-shadow: 0 0 5px 5px #aaa;
+    position: relative;
+}
+
+.cross {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: #aaa;
+        position: absolute;
+        top: 50%;
+        right: 15%;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
