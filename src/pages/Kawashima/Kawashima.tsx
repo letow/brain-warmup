@@ -55,7 +55,7 @@ const Kawashima = () => {
                     </div>
                 ))}
             </div>
-            <InfoBox onClose={closeInfo} isOpen={isOpenInfo}>
+            <InfoBox onClose={closeInfo} isOpen={isOpenInfo} center>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
                 possimus illum aliquam ducimus, iusto praesentium corporis fugit veniam
                 cupiditate minus eveniet, amet similique quasi sed facilis at illo optio
