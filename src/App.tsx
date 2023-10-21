@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import Kawashima from "./pages/Kawashima/Kawashima";
 import MainPage from "./pages/MainPage/MainPage";
 import Stroop from "./pages/Stroop/Stroop";
