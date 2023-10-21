@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import s from "./MainPage.module.scss";
-//@ts-ignore
-import { ReactComponent as Math } from "../../assets/img/math.svg";
+import Math from "./../../assets/img/math.svg";
 
 const MainPage = () => {
     return (
