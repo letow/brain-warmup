@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import s from "./MainPage.module.scss";
-import Math from "./../../assets/img/math.svg";
+import { Link } from 'react-router-dom';
+import s from './MainPage.module.scss';
+import Math from './../../assets/img/math.svg';
 
 const MainPage = () => {
     return (
@@ -10,12 +10,10 @@ const MainPage = () => {
                     <div>
                         <h1 className={s.intro__header}>Разгони свой мозг!</h1>
                         <div className={s.intro__descr}>
-                            Кто такой Гусейн Гасанов? Блогер, который запустил свой
-                            платный курс “Мышление Миллионера". Вокруг данного
-                            инфопродукта у аудитории возник интерес. Я решил потратить
-                            13 с небольшим тысяч рублей, приобрести курс по
-                            максимальному тарифу и пройти обучение. Что произошло с моим
-                            мышлением после? Смотрите в ролике. Приятного просмотра :)
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+                            voluptatibus cum. Sequi quibusdam optio, ducimus magni exercitationem
+                            pariatur culpa cupiditate, porro non repudiandae ut sed itaque debitis
+                            sit, distinctio dolorum!
                         </div>
                     </div>
                     <a href="#links" className={s.link}>

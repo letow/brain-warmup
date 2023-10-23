@@ -1,6 +1,6 @@
-import { FC, useEffect, useState } from "react";
-import s from "./Timer.module.scss";
-import toHHMMSS from "../../helpers/toHHMMSS";
+import { FC, useEffect, useState } from 'react';
+import s from './Timer.module.scss';
+import toHHMMSS from '../../helpers/toHHMMSS';
 
 interface TimerProps {
     seconds: number;
@@ -16,7 +16,7 @@ const Timer: FC<TimerProps> = ({ seconds }) => {
                 clearInterval(timer);
                 return;
             }
-            setTime((t) => (t -= 1));
+            setTime(t => (t -= 1));
         }, 1000);
 
         return () => clearInterval(timer);
