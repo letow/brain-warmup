@@ -5,5 +5,7 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     return {
         port: options.port,
         open: true, // автооткрытие браузера
+        hot: true,
+        historyApiFallback: true, // чтоб не падало сразу при переходе на рут отличный от /
     };
 }
