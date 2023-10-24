@@ -1,20 +1,20 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.scss';
-import Kawashima from './pages/Kawashima/Kawashima';
-import MainPage from './pages/MainPage/MainPage';
-import Stroop from './pages/Stroop/Stroop';
 import { Suspense } from 'react';
+import { StroopAsync } from './pages/Stroop/Stroop.async';
+import { KawashimaAsync } from './pages/Kawashima/Kawashima.async';
+import { MainPageAsync } from './pages/MainPage/MainPage.async';
 
 const App = () => {
     return (
         <div className="App">
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
-                    <Route path="/kawashima" element={<Kawashima />} />
+                    <Route path="/kawashima" element={<KawashimaAsync />} />
 
-                    <Route path="/stroop" element={<Stroop />} />
+                    <Route path="/stroop" element={<StroopAsync />} />
 
-                    <Route path="/" element={<MainPage />} />
+                    <Route path="/" element={<MainPageAsync />} />
 
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
