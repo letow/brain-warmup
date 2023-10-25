@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import { StroopAsync } from './pages/Stroop/Stroop.async';
 import { KawashimaAsync } from './pages/Kawashima/Kawashima.async';
 import { MainPageAsync } from './pages/MainPage/MainPage.async';
+import { AddSubtractAsync } from './pages/AddSubtract/AddSubtract.async';
 
 const App = () => {
     return (
@@ -13,6 +14,8 @@ const App = () => {
                     <Route path="/kawashima" element={<KawashimaAsync />} />
 
                     <Route path="/stroop" element={<StroopAsync />} />
+
+                    <Route path="/addsub" element={<AddSubtractAsync />} />
 
                     <Route path="/" element={<MainPageAsync />} />
 

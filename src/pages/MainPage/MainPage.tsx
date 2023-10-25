@@ -24,7 +24,7 @@ const MainPage = () => {
             </div>
             <div className={s.wrapper}>
                 <div className={s.excercises} id="links">
-                    <h2 className={s.header}>Упра ржения</h2>
+                    <h2 className={s.header}>Упраржения</h2>
                     <div className={s.excercises__cards}>
                         <div className={s.excercises__item}>
                             <Math className={s.excercises__item__icon} />
@@ -36,6 +36,12 @@ const MainPage = () => {
                             <Math className={s.excercises__item__icon} />
                             <Link to="/stroop" className={s.link}>
                                 Струп (цветные слова)
+                            </Link>
+                        </div>
+                        <div className={s.excercises__item}>
+                            <Math className={s.excercises__item__icon} />
+                            <Link to="/addsub" className={s.link}>
+                                Прибавить-вычесть
                             </Link>
                         </div>
                     </div>
