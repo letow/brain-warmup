@@ -4,7 +4,7 @@ import webpack from 'webpack';
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     const babelLoader = {
-        test: /\.(js|jsx|ts|tsx)$/,
+        test: /\.(js|jsx|ts)$/,
         exclude: /node_modules/,
         use: {
             loader: 'babel-loader',
@@ -20,12 +20,19 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     };
 
     const fileLoader = {
-        test: /\.(png|jpe?g|gif|ttf|woff)$/i,
+        test: /\.(png|jpe?g|gif)$/i,
+        dependency: { not: ['url'] },
         use: [
             {
                 loader: 'file-loader',
             },
         ],
+    };
+
+    const typescriptLoader = {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
     };
 
     const scssLoader = {
@@ -45,12 +52,6 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
             },
             'sass-loader',
         ],
-    };
-
-    const typescriptLoader = {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
     };
 
     return [babelLoader, fileLoader, svgLoader, typescriptLoader, scssLoader];
