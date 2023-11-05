@@ -7,20 +7,18 @@ const MainPage = () => {
         <div className={s.MainPage}>
             <div className={s.intro}>
                 <div className={s.intro__info}>
-                    <div>
-                        <h1 className={s.intro__header}>Разгони свой мозг!</h1>
-                        <div className={s.intro__descr}>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
-                            voluptatibus cum. Sequi quibusdam optio, ducimus magni exercitationem
-                            pariatur culpa cupiditate, porro non repudiandae ut sed itaque debitis
-                            sit, distinctio dolorum!
-                        </div>
-                    </div>
+                    <h1 className={s.intro__header}>Разгони свой мозг!</h1>
+                    <p className={s.intro__descr}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatibus
+                        cum. Sequi quibusdam optio, ducimus magni exercitationem pariatur culpa
+                        cupiditate, porro non repudiandae ut sed itaque debitis sit, distinctio
+                        dolorum!
+                    </p>
                     <a href="#links" className={s.link}>
                         Сделать мозг размером с Юпитер
                     </a>
                 </div>
-                <div className={s.intro__orange}></div>
+                <div className={s.intro__orange} />
             </div>
             <div className={s.wrapper}>
                 <div className={s.excercises} id="links">

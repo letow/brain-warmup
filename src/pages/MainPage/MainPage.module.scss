@@ -4,8 +4,7 @@
 
     .intro {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         height: 100vh;
         z-index: -10;
         text-shadow: 2px 0 5px #000;
@@ -14,10 +13,11 @@
         &__info {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
             gap: 35px;
-            max-width: 45vw;
-            margin-left: 3vw;
+            width: 45vw;
+            padding-left: 20px;
         }
 
         &__header {
@@ -27,8 +27,7 @@
         }
 
         &__descr {
-            width: 80%;
-            margin-left: 10px; // :)
+            width: 100%;
             text-shadow: 2px 0 2px #000;
         }
 
@@ -39,10 +38,7 @@
             background-position: left;
             height: 100vh;
             width: 50vw;
-            position: absolute;
-            top: 0;
             border-radius: 50% 0 0 50%;
-            transform: translateX(100%);
             box-shadow: 10px 0 10px 0 #00000033 inset;
         }
     }
@@ -82,10 +78,11 @@
 
     &__cards {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
         align-items: center;
     }
+
     &__item {
         margin: auto;
         display: flex;
@@ -96,10 +93,29 @@
         box-shadow: 0 0 5px 5px #00000033;
         padding: 20px;
         gap: 30px;
+        width: 90%;
 
         &__icon {
             height: 150px;
             width: 150px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .intro {
+        & .intro__descr {
+            width: 85%;
+        }
+
+        & > .intro__info {
+            text-align: center;
+            width: 100vw;
+            padding: 0;
+        }
+
+        &__orange {
+            display: none;
         }
     }
 }
