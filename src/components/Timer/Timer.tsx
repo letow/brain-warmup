@@ -4,9 +4,10 @@ import toHHMMSS from '../../helpers/toHHMMSS';
 
 interface TimerProps {
     seconds: number;
+    func?: React.Dispatch<React.SetStateAction<unknown>>;
 }
 
-const Timer: FC<TimerProps> = ({ seconds }) => {
+const Timer: FC<TimerProps> = ({ seconds, func }) => {
     const [time, setTime] = useState<number>(seconds);
     const timeOut = time === 0;
 
@@ -14,6 +15,8 @@ const Timer: FC<TimerProps> = ({ seconds }) => {
         const timer = setInterval(() => {
             if (timeOut) {
                 clearInterval(timer);
+                func((num: number) => (num += 1));
+                setTime(seconds);
                 return;
             }
             setTime(t => (t -= 1));

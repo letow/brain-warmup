@@ -10,6 +10,8 @@ const Kawashima = () => {
     const [showAns, setShowAns] = useState(false);
     const [isOpenInfo, setIsOpenInfo] = useState(true);
 
+    const [times, setTimes] = useState(0);
+
     const data = useMemo(() => {
         const problems = Array.from(Array(problemAmount), () =>
             Array.from({ length: 2 }, () => Math.floor(Math.random() * 20)),
@@ -23,7 +25,7 @@ const Kawashima = () => {
             operations[ind] === '/' ? item[0] % item[1] : 0,
         ]);
         return { problems, operations, answers };
-    }, []);
+    }, [times]);
 
     const closeInfo = () => {
         setIsOpenInfo(false);
@@ -33,7 +35,7 @@ const Kawashima = () => {
         <div className={s.Kawashima}>
             <div className={s.header}>
                 <button onClick={() => setShowAns(prev => !prev)}>Show answers</button>
-                <Timer seconds={500} />
+                <Timer seconds={60} func={setTimes} />
             </div>
             <div className={s.problems}>
                 {data.problems.map((item, ind) => (
