@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode, memo } from 'react';
 import s from './InfoBox.module.scss';
 
 interface InfoBoxProps {
@@ -23,4 +23,4 @@ const InfoBox: FC<InfoBoxProps> = ({ children, center = false, isOpen = true, on
     );
 };
 
-export default InfoBox;
+export default memo(InfoBox);
