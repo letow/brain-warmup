@@ -25,7 +25,7 @@ const Timer: FC<TimerProps> = ({ seconds, func }) => {
         return () => clearInterval(timer);
     }, [timeOut]);
 
-    return <div className={s.Timer}>{toHHMMSS(time)}</div>;
+    return <div className={`${s.Timer} ${time < 10 && s.colored}`}>{toHHMMSS(time)}</div>;
 };
 
 export default Timer;
