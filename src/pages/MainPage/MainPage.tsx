@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import s from './MainPage.module.scss';
 import Math from './../../assets/img/math.svg';
+import PlusMinus from './../../assets/img/plus-minus.svg';
 
 const MainPage = () => {
     return (
@@ -31,13 +32,18 @@ const MainPage = () => {
                             </Link>
                         </div>
                         <div className={s.excercises__item}>
-                            <Math className={s.excercises__item__icon} />
+                            <div className={s.excercises__item__icon}>
+                                <p className={s.red}>КРАСНЫЙ</p>
+                                <p className={s.blue}>СИНИЙ</p>
+                                <p className={s.green}>ЗЕЛЕНЫЙ</p>
+                                <p className={s.yellow}>ЖЕЛТЫЙ</p>
+                            </div>
                             <Link to="/stroop" className={s.link}>
                                 Струп (цветные слова)
                             </Link>
                         </div>
                         <div className={s.excercises__item}>
-                            <Math className={s.excercises__item__icon} />
+                            <PlusMinus className={s.excercises__item__icon} />
                             <Link to="/addsub" className={s.link}>
                                 Прибавить-вычесть
                             </Link>
