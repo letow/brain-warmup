@@ -48,6 +48,12 @@ const MainPage = () => {
                                 Прибавить-вычесть
                             </Link>
                         </div>
+                        <div className={s.excercises__item}>
+                            <PlusMinus className={s.excercises__item__icon} />
+                            <Link to="/sudoku" className={s.link}>
+                                Судоку
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
