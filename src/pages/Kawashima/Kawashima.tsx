@@ -35,7 +35,7 @@ const Kawashima = () => {
         <div className={s.Kawashima}>
             <div className={s.header}>
                 <button onClick={() => setShowAns(prev => !prev)}>Show answers</button>
-                {!isOpenInfo && <Timer seconds={60} func={setTimes} />}
+                {!isOpenInfo && <Timer seconds={240} func={setTimes} />}
             </div>
             <div className={s.problems}>
                 {data.problems.map((item, ind) => (
